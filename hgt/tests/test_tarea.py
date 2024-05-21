@@ -1,2 +1,2 @@
-from hgt.tarea import Tarea
+from tarea import Tarea
 
