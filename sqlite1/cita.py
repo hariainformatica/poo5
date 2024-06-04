@@ -1,5 +1,5 @@
 class Cita:
-    def __init__(self, cita):
+    def __init__(self, cita:str) -> None:
         self.cita = cita
 
     def __str__(self) -> str:
