@@ -43,7 +43,7 @@ class ColeccionCitas:
 
     def actualizar(self, oldCita:str, newCita:str):
         id = self.buscar(oldCita)
-        if id != 0:
+        if id != 0 and self.buscar(newCita) == 0:
             elstr = SQLDDLUPDATEPART1 + newCita 
             elstr += SQLDDLUPDATEPART2 + str(id)
             self.con.execute(elstr)

@@ -7,6 +7,6 @@ cc = ColeccionCitas()
 
 print(cc.buscar(Cita('La vida es bella')))
 print(cc.insertar(Cita('Quedan 2 semanas de clase')))
-#cc.borrar(Cita('La vida es bella'))
-cc.actualizar("Quedan 2 semanas de clase", "Aguanta ahí")
+cc.borrar(Cita('Aguanta ahí'))
+cc.actualizar("Quedan 2 semanas de clase", "Hola qué tal!")
 print(cc.leer())
