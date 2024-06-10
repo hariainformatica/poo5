@@ -13,10 +13,17 @@ ROWS = [
 class MainScreen(Screen):
     def compose(self) -> ComposeResult:
         yield DataTable()
-        yield Button("Edición")
+        yield Horizontal(
+            Button("Nuevo", id="bNuevo"),
+            Button("Editar", id="bEditar"),
+            Button("Borrar", id="bBorrar")
+        )
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
-        self.app.switch_to_edit()
+        id = event.button.id
+        
+        if id == "bEditar":
+            self.app.switch_to_edit()
 
     def on_mount(self) -> None:
         table = self.query_one(DataTable)
